@@ -3,7 +3,7 @@ import Buttons from "./components/Buttons";
 // import "./App.css";
 
 function App() {
-  const [color, setColor] = useState("olive");
+  const [color, setColor] = useState("");
 
   function handleColorChanger(colour) {
     setColor(colour);
@@ -11,9 +11,10 @@ function App() {
 
   return (
     <div className="w-full h-screen duration-200" style={{ background: color }}>
-      <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-3 px-2">
+      <div className="fixed flex flex-row flex-wrap justify-center bottom-12 inset-x-3 px-2">
         <div className="flex flex-wrap justify-center gap-3 rounded-3xl shadow-lg bg-white px-3 py-2 ">
-          {/* <button // create buttons in a old way
+          {/* create buttons in a old way */}
+          {/* <button
             onClick={() => handleColorChanger("red")}
             className="outline-none px-4 py-1 rounded-full shadow-lg text-white"
             style={{ backgroundColor: "red" }}
@@ -21,7 +22,7 @@ function App() {
             Red
           </button> */}
 
-          {/* in a better way */}
+          {/* Button is a components */}
           <Buttons onColorChange={handleColorChanger} colour={"red"}>
             Red
           </Buttons>
